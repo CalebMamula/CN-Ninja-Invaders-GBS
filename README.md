@@ -77,7 +77,6 @@ mySprite.setPosition(randint(0, 10), 0)
 
 ## Introduction @showdialog
 In this tutorial, you will create your very own video game. Enemies will be falling from the sky, and it's up to you to shoot them before they can reach you. Follow the instructions, but feel free to be creative and add custom details. Click Ok to get started!
-![Image description](https://raw.githubusercontent.com/microsoft/pxt-tutorial-sample/master/images/enemies.gif)
 ![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs2/master/images./ninja_invaders.gif%20(2).gif)
 ## GBS: Ninja Invasion Step 1
 ### Making Our Background  
