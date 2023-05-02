@@ -77,12 +77,10 @@ mySprite.setPosition(randint(0, 10), 0)
 
 ## Introduction @showdialog
 In this tutorial, you will create your very own video game. Enemies will be falling from the sky, and it's up to you to shoot them before they can reach you. Follow the instructions, but feel free to be creative and add custom details. Click Ok to get started!
-![Image description](https://github.com/CalebMamula/Caleb-CodeNinjas-GBS/blob/1cf49c592b5e93c65eea6b0104407d532019ae2a/images./ninja_invaders.gif%20(2).gif)
-
+![Game Example][(https://raw.githubusercontent.com/calebmamula/cn-ninja-invaders-gbs1/master/images./ninja_invaders.gif (2).gif)]
+images./ninja_invaders.gif (2).gif
 ## GBS: Ninja Invasion Step 1
 ### Make Our Background  
-![Image description](https://github.com/CalebMamula/Caleb-CodeNinjas-GBS/blob/1cf49c592b5e93c65eea6b0104407d532019ae2a/images./ninja_invaders.gif%20(2).gif)
-
 
 
 First up, our game needs a background. Grab a ``||scene:set background color||`` block from the ``||scene:Scene|`` dropdown and place it inside our ``||loops:on start||`` container already on the screen.
