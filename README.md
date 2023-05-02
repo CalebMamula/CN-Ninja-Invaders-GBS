@@ -81,7 +81,7 @@ In this tutorial, you will create your very own video game. Enemies will be fall
 
 ## GBS: Ninja Invasion Step 1
 ### Make Our Background  
-
+![Image description](https://github.com/CalebMamula/Caleb-CodeNinjas-GBS/blob/1cf49c592b5e93c65eea6b0104407d532019ae2a/images./ninja_invaders.gif%20(2).gif)
 
 
 
