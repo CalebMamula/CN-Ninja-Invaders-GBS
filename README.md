@@ -63,7 +63,7 @@ controller.moveSprite(mySprite, 100, 0)
 mySprite.setStayInScreen(true)
 info.setScore(0)
 game.onUpdateInterval(1000, function () {
-    alien = sprites.createProjectileFromSide()
+     alien = sprites.createProjectileFromSide()
     alien.setKind(SpriteKind.Enemy)
     alien.setPosition(randint(0, 160), 0)
 })
@@ -72,12 +72,32 @@ mySprite.setPosition(randint(0, 10), 0)
 
 ```
 
+```blockconfig.global
+ myEnemy = sprites.createProjectileFromSide(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, 50, 50)
+```
 
 
 
 ## Introduction @showdialog
 In this tutorial, you will create your very own video game. Enemies will be falling from the sky, and it's up to you to shoot them before they can reach you. Follow the instructions, but feel free to be creative and add custom details. Click Ok to get started!
-![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs2/master/images./ninja_invaders.gif%20(2).gif)
+![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs/master/images./ninja-invader-gif.gif)
 ## GBS: Ninja Invasion Step 1
 ### Making Our Background  
 
@@ -124,7 +144,7 @@ We need to tell the game which sprite we want to move. Make sure to change **myS
 Did you notice your character can go off screen? To fix this we are going to use ``||sprites:set [mySprite] stay in screen |``. Once again, be sure to change **mySprite** to **Ninja**.
 
 
-Next, we need our character to only go back and forth. First, grab ``||sprites:setPosition||`` from ``||sprites:Sprites||``. Set the x around 75 and the y to about 100.
+Next, we need our character to only go back and forth. First, grab ``||sprites:set position||`` from ``||sprites:Sprites||``. Look back to our ``||controller:Controller||`` block we placed in the previous step and change the x to 75 and the y to 100. (Numbers do not need to be exact)
 
 
 We also need to stop the player from moving up and down. First click the + button on the right side on the block. Now, change the vy box on the ``||controller:move||`` block to 0.
@@ -135,13 +155,13 @@ We also need to stop the player from moving up and down. First click the + butto
 To spawn our enemies go to ``||game:Game||`` and pull the ``||game:on game update every||`` onto the editor. This is a container, so you can place it anywhere you'd like. The code we place here will run on a repeating timer.
 
 
-Now we are going to create our enemy. Use a ``||variables:set [projectile] to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container. **There are two ``||variables:projectile||`` blocks. Use the bottom one.**
+Now we are going to create our enemy. Use a ``||variables:set [myEnemy to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container.
 
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
 
 
-At the end of the ``||variables:projectile||`` block, change the (vx) to 0 and the (vy) to 30. This will make our sprites go straight down. Also make sure to change the name of your sprite by clicking on **mySprite** and pressing **Rename variable**. Pick any name that fits your new enemy.
+At the end of the ``||variables:myEnemy|`` block, change the (vx) to 0 and the (vy) to 30. This will make our sprites go straight down. Also make sure to change the name of your sprite by clicking on **myEnemy** and pressing **Rename variable**. Pick any name that fits your new enemy.
 
 
 ## GBS: Ninja Invasion Step 6
@@ -157,7 +177,7 @@ Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into 
 Notice how many enemies are coming down? We can change this by modifying the number at the top of the container. Instead of 500 ms, try 1 Second (1000 ms).
 
 
-Final thing for our enemies, we need to change their kind. Grab a ``||sprites:set [mySprite] kind to||`` and choose Enemy. We will need this later on. Don't forget to set which sprite we are affecting.
+Final thing for our enemies, we need to change their kind. Grab a ``||sprites:set [mySprite] kind to||`` block and choose Enemy. We will need this later on. Don't forget to set which sprite we are affecting.
 
 
 ## GBS: Ninja Invasion Step 7
@@ -165,16 +185,16 @@ Final thing for our enemies, we need to change their kind. Grab a ``||sprites:se
 Now we are going to code our projectiles. To start, we are going to need a new container. Let's use the ``||controller:On A button pressed||``. This can be placed anywhere on the coding area. Code we place in this new container will run when we hit the space bar.
 
 
-In this container we are going to place a ``||variables:set [projectile] to||`` block from the ``||sprites:Sprites||`` dropdown. **There are two ``||variables:projectile||`` blocks. Use the top one.**
+In this container we are going to place a ``||variables:set [projectile] to||`` block from the ``||sprites:Sprites||`` dropdown. *
 
 
-Click the grey oval and select a picture from **Gallery** or quickly design your own. Keep it simple.
+At the end of the ``||variables:projectile||`` block we just placed in, change the (vx) to 0 and the (vy) to -100. This will make our sprites go straight up at a good speed.
 
 
-Change the **mySprite** to **Ninja**, that way it will look like the ninja is firing the shots.
+Click the grey oval and either select a picture from **Gallery**, select the shuriken under **My Assets**, or quickly design your own. Keep it simple.
 
 
-At the end of the ``||variables:projectile||`` block, change the (vx) to 0 and the (vy) to -100. This will make our sprites quickly go straight up.
+Change the **mySprite** to the name of your player, that way it will look like your player is firing the shots.
 
 
 Open the game and try it out. Our character can now shoot projectiles when you press space.
@@ -220,16 +240,16 @@ Try the game out! When you are ready, move on to the final step.
 -Put sound effects in the game for even more fun!
 
 
--Allow a way to win. Add a timer, add lives, or some combination. Be creative!
+-Allow a way to win. Add a timer, add lives, or some combination. Maybe a highscore? Be creative!
 
 
--Add animations. For example, make the projectiles 'spin'.
+-Add animations. For example, make the projectiles spin or change color as they fly.
 
 
 -Make a new type of enemy. Maybe something that moves faster? Perhaps harder to kill?
 
 
-*Decide with your Sensei for which customizations you want to make to your game. When you are ready, click **Done**.*
+*Decide with your Sensei on which customizations you want to make to your game. When you are ready, click **Done**.*
 
 
 
