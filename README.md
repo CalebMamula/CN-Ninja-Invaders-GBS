@@ -155,7 +155,7 @@ We also need to stop the player from moving up and down. First click the + butto
 To spawn our enemies go to ``||game:Game||`` and pull the ``||game:on game update every||`` onto the editor. This is a container, so you can place it anywhere you'd like. The code we place here will run on a repeating timer.
 
 
-Now we are going to create our enemy. Use a ``||variables:set [myEnemy to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container.
+Now we are going to create our enemy. Use a ``||variables:set [myEnemy] to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container.
 
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
