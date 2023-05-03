@@ -168,13 +168,13 @@ At the end of the ``||variables:myEnemy|`` block, change the (vx) to 0 and the (
 ### Spawning The Enemies Part 2
 
 
-We will now use a ``||sprites:set [mySprite] position to||`` block to make all enemies start at the top of the screen. Change **mySprite** to the name of your enemy.
+We will now use a ``||sprites:set [mySprite] position to||`` block into the ``||game:on game update every||`` container to make all enemies start at the top of the screen. Change **mySprite** to the name of your enemy.
 
 
-Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into the x oval of our ``||sprites:set  [mySprite] position to ||`` block. Change the range so it goes from 0 to 160. The y oval will stay as 0.
+Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into the x oval of our ``||sprites:set  [mySprite] position to ||`` block. Change the 10 to 160. Now any number can be picked between 0 and 160.
 
 
-Notice how many enemies are coming down? We can change this by modifying the number at the top of the container. Instead of 500 ms, try 1 Second (1000 ms).
+Notice how many enemies are coming down? We can change this by modifying the number at the top of the container. Instead of 500 ms, try 1 second (1000 ms).
 
 
 Final thing for our enemies, we need to change their kind. Grab a ``||sprites:set [mySprite] kind to||`` block and choose Enemy. We will need this later on. Don't forget to set which sprite we are affecting.
@@ -214,7 +214,7 @@ Now when our **Projectile** hits the **Enemy**, the code we place in this contai
 ```
 ## GBS: Ninja Invasion Step 9
 ### Destroy The Enemies Part 2
-Place a ``||sprites:destroy [mySprite]||`` block inside our new overlap container. Drag an ``||variables:otherSprite||`` oval where it says ``||variables:mySprite||``.
+Place a ``||sprites:destroy [mySprite]||`` block inside our new overlap container. Drag an ``||variables:otherSprite||`` oval where it says ``||variables:mySprite||`` (This is found at the top of our ``||sprites:overlap||`` container).
 
 
 Now click the + button on the new destroy block. Pick a fun effect and try it out. It is recommended to change the duration time to either 100 ms or 200 ms.
