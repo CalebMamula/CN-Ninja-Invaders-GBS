@@ -1,3 +1,6 @@
+
+> http://arcade.makecode.com/#tutorial:https://github.com/calebmamula/cn-ninja-invaders-gbs
+
 ### @explicitHints true
 # Code Ninjas Unofficial GBS (Ninja Invaders)
 
