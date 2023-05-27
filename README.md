@@ -111,7 +111,7 @@ First up, our game needs a background. Grab a ``||scene:set background color||``
 Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background.
 
 
-Chcek the Game Window on the right side of the screen to see the selected background color appear!
+Check the Game Window on the right side of the screen to see the selected background color appear!
 
 
 Click **Next** to go to the next step.
