@@ -105,7 +105,7 @@ In this tutorial, you will create your very own video game. Enemies will be fall
 ### Making Our Background  
 
 
-First up, our game needs a background. Grab a ``||scene:set background color||`` block from the ``||scene:Scene|`` dropdown and place it inside our ``||loops:on start||`` container already on the screen.
+First up, our game needs a background. Open ``||scene:Scene|`` and drag ``||scene:set background color||`` inside our ``||loops:on start||`` container already on the screen.
 
 
 Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background.
@@ -121,7 +121,7 @@ Click **Next** to go to the next step.
 ### Add Our Player Sprite
 
 
-Now we are going to create our main character. Use a ``||variables:set [mySprite] to||`` block from the ``||sprites:Sprites||`` dropdown and place it at the bottom of the ``||loops: on start||`` container.
+Now we are going to create our main character. Open ``||sprites:Sprites||`` and grab the ``||variables:set [mySprite] to||`` block from the  dropdown and place it at the bottom of the ``||loops: on start||`` container.
 
 
 Click the grey oval and select the ninja picture under **My Assets**. Feel free to change this sprite and make it your own.
