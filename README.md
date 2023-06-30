@@ -121,7 +121,7 @@ Click **Next** to go to the next step.
 ### Add Our Player Sprite
 
 
-Now we are going to create our main character. Open ``||sprites:Sprites||`` and grab the ``||variables:set [mySprite] to||`` block from the  dropdown and place it at the bottom of the ``||loops: on start||`` container.
+Now we are going to create our main character. Open ``||sprites:Sprites||`` and drag the ``||variables:set [mySprite] to||`` block to the bottom of the ``||loops: on start||`` container.
 
 
 Click the grey oval and select the ninja picture under **My Assets**. Feel free to change this sprite and make it your own.
@@ -134,26 +134,22 @@ Make sure to change the name of your sprite by clicking on **mySprite** and pres
 ### Code Movement
 
 
-To move our ninja we need to use a ``||controller:move [mySprite] with buttons||`` block. Place this at the bottom of the ``||loops:on start||`` container.
+To move our ninja we need to open ``||controller:Controller||`` and drag ``||controller:move [mySprite] with buttons||`` block to the bottom of the ``||loops:on start||`` container.
 
 
 We need to tell the game which sprite we want to move. Make sure to change **mySprite** to **Ninja**. This means the arrow keys and WASD can now move the ninja. Try it out!
+
+Next, we need our character to only go back and forth (not up and down). First click the + button on the right side on the ``||controller:move [mySprite] with buttons||`` block. Now, change the (vy) box on the ``||controller:move||`` block to 0.
+
+Did you notice your character can go off screen? To fix this we are going to open ``||sprites:Sprites||`` and drag ``||sprites:set [mySprite] stay in screen |`` to the bottom of our ``||loops:on start||``. Once again, be sure to change **mySprite** to **Ninja**.
+
+
+
 
 
 
 
 ## GBS: Ninja Invasion Step 4
-### Restrict Movement
-Did you notice your character can go off screen? To fix this we are going to use ``||sprites:set [mySprite] stay in screen |``. Once again, be sure to change **mySprite** to **Ninja**.
-
-
-Next, we need our character to only go back and forth. First, grab ``||sprites:set position||`` from ``||sprites:Sprites||``. Look back to our ``||controller:Controller||`` block we placed in the previous step and change the x to 75 and the y to 100. (Numbers do not need to be exact)
-
-
-We also need to stop the player from moving up and down. First click the + button on the right side on the block. Now, change the vy box on the ``||controller:move||`` block to 0.
-
-
-## GBS: Ninja Invasion Step 5
 ### Spawning The Enemies Part 1
 To spawn our enemies go to ``||game:Game||`` and pull the ``||game:on game update every||`` onto the editor. This is a container, so you can place it anywhere you'd like. The code we place here will run on a repeating timer.
 
@@ -167,7 +163,7 @@ Click the grey oval and select a sprite of your choice from **Gallery**.
 At the end of the ``||variables:myEnemy|`` block, change the (vx) to 0 and the (vy) to 30. This will make our sprites go straight down. Also make sure to change the name of your sprite by clicking on **myEnemy** and pressing **Rename variable**. Pick any name that fits your new enemy.
 
 
-## GBS: Ninja Invasion Step 6
+## GBS: Ninja Invasion Step 5
 ### Spawning The Enemies Part 2
 
 
@@ -183,7 +179,7 @@ Notice how many enemies are coming down? We can change this by modifying the num
 Final thing for our enemies, we need to change their kind. Grab a ``||sprites:set [mySprite] kind to||`` block and choose Enemy. We will need this later on. Don't forget to set which sprite we are affecting.
 
 
-## GBS: Ninja Invasion Step 7
+## GBS: Ninja Invasion Step 6
 ### Ready, Aim, FIRE!
 Now we are going to code our projectiles. To start, we are going to need a new container. Let's use the ``||controller:On A button pressed||``. This can be placed anywhere on the coding area. Code we place in this new container will run when we hit the space bar.
 
@@ -203,7 +199,7 @@ Change the **mySprite** to the name of your player, that way it will look like y
 Open the game and try it out. Our character can now shoot projectiles when you press space.
 
 
-## GBS: Ninja Invasion Step 8
+## GBS: Ninja Invasion Step 7
 ### Destroy The Enemies Part 1
 
 
@@ -214,8 +210,8 @@ Change the first ``||sprites:Player||`` to ``||sprites:Projectile||``, and the s
 
 
 Now when our **Projectile** hits the **Enemy**, the code we place in this container will run.
-```
-## GBS: Ninja Invasion Step 9
+
+## GBS: Ninja Invasion Step 8
 ### Destroy The Enemies Part 2
 Place a ``||sprites:destroy [mySprite]||`` block inside our new overlap container. Drag an ``||variables:otherSprite||`` oval where it says ``||variables:mySprite||`` (This is found at the top of our ``||sprites:overlap||`` container).
 
@@ -229,7 +225,7 @@ Last but not least, go to ``||info:Info||`` and grab a ``||info:change score by|
 Try the game out! When you are ready, move on to the final step.
 
 
-## GBS: Ninja Invasion Step 10
+## GBS: Ninja Invasion Step 9
 ### ``||variables:C||`` ``||controller:u||`` ``||loops:s||`` ``||animation:t||`` ``||logic:o||`` ``||sprites:m||`` ``||music:i||`` ``||math:z||`` ``||scene:e||``
 **The tutorial is finished, but now it's time to customize. Here are a few examples of things to try:**
 
