@@ -143,9 +143,7 @@ Next, we need our character to only go back and forth (not up and down). First c
 
 Did you notice your character can go off screen? To fix this we are going to open ``||sprites:Sprites||`` and drag ``||sprites:set [mySprite] stay in screen |`` to the bottom of our ``||loops:on start||``. Once again, be sure to change **mySprite** to **Ninja**.
 
-
-
-
+Finally, go to ``||sprites:Sprites||`` and drag ``||sprites:set position||``. Set the numbers to 75 for (x) and 100 for (y).
 
 
 
@@ -154,7 +152,7 @@ Did you notice your character can go off screen? To fix this we are going to ope
 To spawn our enemies go to ``||game:Game||`` and pull the ``||game:on game update every||`` onto the editor. This is a container, so you can place it anywhere you'd like. The code we place here will run on a repeating timer.
 
 
-Now we are going to create our enemy. Use a ``||variables:set [myEnemy] to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container.
+Now we are going to create our enemy. Open ``||sprites:Sprites||`` and grab a ``||variables:set [myEnemy] to||`` block from the ``||sprites:Sprites||`` dropdown and place it in the ``||game:on game update every||`` container.
 
 
 Click the grey oval and select a sprite of your choice from **Gallery**.
@@ -167,30 +165,30 @@ At the end of the ``||variables:myEnemy|`` block, change the (vx) to 0 and the (
 ### Spawning The Enemies Part 2
 
 
-We will now use a ``||sprites:set [mySprite] position to||`` block into the ``||game:on game update every||`` container to make all enemies start at the top of the screen. Change **mySprite** to the name of your enemy.
+We will now pull a ``||sprites:set [mySprite] position to||`` block into the ``||game:on game update every||`` container to make all enemies start at the top of the screen. Change **mySprite** to the name of your enemy.
 
 
-Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into the x oval of our ``||sprites:set  [mySprite] position to ||`` block. Change the 10 to 160. Now any number can be picked between 0 and 160.
+Under ``||math:Math||`` grab a ``||math:pick random||`` block and place it into the x oval of our ``||sprites:set  [mySprite] position to ||`` block. Change the 10 to 160. Now the enemies will start at any point along the top of the screen.
 
 
 Notice how many enemies are coming down? We can change this by modifying the number at the top of the container. Instead of 500 ms, try 1 second (1000 ms).
 
 
-Final thing for our enemies, we need to change their kind. Grab a ``||sprites:set [mySprite] kind to||`` block and choose Enemy. We will need this later on. Don't forget to set which sprite we are affecting.
+Final thing for our enemies, we need to change their kind. At the bottom of the ``||game:on game update every||`` container put a ``||sprites:set [mySprite] kind to||`` block and change the kind to **Enemy**. We will need this later on. Don't forget to set which sprite we are affecting.
 
 
 ## GBS: Ninja Invasion Step 6
 ### Ready, Aim, FIRE!
-Now we are going to code our projectiles. To start, we are going to need a new container. Let's use the ``||controller:On A button pressed||``. This can be placed anywhere on the coding area. Code we place in this new container will run when we hit the space bar.
+Now we are going to code our projectiles. To start, we are going to need a new container. Let's use the ``||controller:on A button pressed||``. This can be placed anywhere on the coding area. Code we place in this new container will run when we hit the space bar.
 
 
-In this container we are going to place a ``||variables:set [projectile] to||`` block from the ``||sprites:Sprites||`` dropdown. *
+In this container we are going to place a ``||variables:set [projectile] to||`` block from the ``||sprites:Sprites||`` dropdown.
 
 
 At the end of the ``||variables:projectile||`` block we just placed in, change the (vx) to 0 and the (vy) to -100. This will make our sprites go straight up at a good speed.
 
 
-Click the grey oval and either select a picture from **Gallery**, select the shuriken under **My Assets**, or quickly design your own. Keep it simple.
+Click the grey oval and either select a picture from **Gallery** or select the shuriken under **My Assets**.
 
 
 Change the **mySprite** to the name of your player, that way it will look like your player is firing the shots.
@@ -206,14 +204,14 @@ Open the game and try it out. Our character can now shoot projectiles when you p
 Almost done. For our next step, go to ``||sprites:Sprites||`` and grab the ``||sprites: on sprite of kind [Player] overlaps otherSprite of kind [Player]||``.
 
 
-Change the first ``||sprites:Player||`` to ``||sprites:Projectile||``, and the second ``||sprites:Player||`` to ``||sprites:Enemy||``.
+Change the first sprite kind from ``||sprites:Player||`` to ``||sprites:Projectile||``, and the second from ``||sprites:Player||`` to ``||sprites:Enemy||``.
 
 
 Now when our **Projectile** hits the **Enemy**, the code we place in this container will run.
 
 ## GBS: Ninja Invasion Step 8
 ### Destroy The Enemies Part 2
-Place a ``||sprites:destroy [mySprite]||`` block inside our new overlap container. Drag an ``||variables:otherSprite||`` oval where it says ``||variables:mySprite||`` (This is found at the top of our ``||sprites:overlap||`` container).
+Place a ``||sprites:destroy [mySprite]||`` block inside our new overlap container. Drag the ``||variables:otherSprite||`` oval to where it says **mySprite** in the ``||variables:destroy||`` block.
 
 
 Now click the + button on the new destroy block. Pick a fun effect and try it out. It is recommended to change the duration time to either 100 ms or 200 ms.
