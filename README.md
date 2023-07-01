@@ -99,13 +99,13 @@ mySprite.setPosition(randint(0, 10), 0)
 
 
 ## Introduction @showdialog
-In this tutorial, you will create your very own video game. Enemies will be falling from the sky, and it's up to you to shoot them before they can reach you. Follow the instructions, but feel free to be creative and add custom details. Click Ok to get started!
+In this tutorial, you will create your very own video game. Enemies will be falling from the sky, and it's up to you to shoot them before they can reach you. Follow the instructions, but feel free to be creative and add custom details at the end. Click **Ok** to get started!
 ![Game Example](https://raw.githubusercontent.com/CalebMamula/cn-ninja-invaders-gbs/master/images./ninja-invader-gif.gif)
 ## GBS: Ninja Invasion Step 1
 ### Making Our Background  
 
 
-First up, our game needs a background. Open ``||scene:Scene|`` and drag ``||scene:set background color||`` inside our ``||loops:on start||`` container already on the screen.
+First up, our game needs a background. Open ``||scene:Scene|`` and drag ``||scene:set background color||`` inside the ``||loops:on start||`` container already on the screen.
 
 
 Click the grey bubble in the ``||scene: set background color||`` block and select a color to use as a background.
@@ -225,7 +225,7 @@ Try the game out! When you are ready, move on to the final step.
 
 ## GBS: Ninja Invasion Step 9
 ### ``||variables:C||`` ``||controller:u||`` ``||loops:s||`` ``||animation:t||`` ``||logic:o||`` ``||sprites:m||`` ``||music:i||`` ``||math:z||`` ``||scene:e||``
-**The tutorial is finished, but now it's time to customize. Here are a few examples of things to try:**
+**The tutorial is finished, but now it's time to customize our game! Here are a few examples of things to try:**
 
 
 -Put a dialog box or splash screen for game instructions.
