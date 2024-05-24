@@ -63,6 +63,15 @@ mySprite.setPosition(randint(0, 10), 0)
 
 
 ```
+```customts
+forever(function () {
+    for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
+        if (value.y > 125) {
+            sprites.destroy(value)
+        }
+    }
+})
+```
 
 
 
